@@ -18,7 +18,15 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        roboto: ["Roboto", "sans-serif"],
+      },
       colors: {
+        // Custom cybersecurity platform colors
+        cybersec: {
+          blue: "#007BFF",
+          green: "#28A745",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
