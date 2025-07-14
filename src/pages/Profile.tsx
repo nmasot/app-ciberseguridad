@@ -19,6 +19,7 @@ import {
   ArrowLeft,
   Play,
   Star,
+  Shield,
 } from "lucide-react";
 import { Badge as BadgeComponent } from "@/components/gamification/Badge";
 import { PointsDisplay } from "@/components/gamification/PointsDisplay";
@@ -153,13 +154,23 @@ export default function Profile() {
                 Mi Perfil
               </h1>
             </div>
-            <Button
-              onClick={() => navigate("/game")}
-              className="bg-cybersec-blue hover:bg-blue-600 flex items-center space-x-2"
-            >
-              <Play className="w-4 h-4" />
-              <span>Nuevo Entrenamiento</span>
-            </Button>
+            <div className="flex space-x-2">
+              <Button
+                variant="outline"
+                onClick={() => navigate("/passwords")}
+                className="flex items-center space-x-2"
+              >
+                <Shield className="w-4 h-4" />
+                <span>Contraseñas</span>
+              </Button>
+              <Button
+                onClick={() => navigate("/game")}
+                className="bg-cybersec-blue hover:bg-blue-600 flex items-center space-x-2"
+              >
+                <Play className="w-4 h-4" />
+                <span>Nuevo Entrenamiento</span>
+              </Button>
+            </div>
           </div>
         </div>
       </header>
