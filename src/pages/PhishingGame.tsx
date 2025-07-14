@@ -91,6 +91,16 @@ export default function PhishingGame() {
               <Button
                 variant="outline"
                 size="sm"
+                onClick={() => navigate("/passwords")}
+                className="flex items-center space-x-2"
+              >
+                <Shield className="w-4 h-4" />
+                <span>Contraseñas</span>
+              </Button>
+
+              <Button
+                variant="outline"
+                size="sm"
                 onClick={() => navigate("/profile")}
                 className="flex items-center space-x-2"
               >
@@ -179,25 +189,55 @@ export default function PhishingGame() {
               </Card>
             </div>
 
-            <Card className="max-w-md mx-auto">
-              <CardHeader>
-                <CardTitle className="text-center text-cybersec-blue">
-                  Comenzar Entrenamiento
-                </CardTitle>
-                <CardDescription className="text-center">
-                  Responde 5 preguntas sobre phishing y obtén tu puntuación
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <Button
-                  onClick={handleStartGame}
-                  className="w-full bg-cybersec-blue hover:bg-blue-600 text-lg py-6"
-                >
-                  <Play className="w-6 h-6 mr-2" />
-                  Comenzar Juego
-                </Button>
-              </CardContent>
-            </Card>
+            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+              <Card className="text-center">
+                <CardHeader>
+                  <div className="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-2">
+                    <span className="text-2xl text-white">🔐</span>
+                  </div>
+                  <CardTitle className="text-purple-600">
+                    Laboratorio de Contraseñas
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <CardDescription>
+                    Aprende a crear contraseñas seguras con retroalimentación en
+                    tiempo real y desafíos interactivos.
+                  </CardDescription>
+                  <Button
+                    onClick={() => navigate("/passwords")}
+                    variant="outline"
+                    className="w-full"
+                  >
+                    Ir al Laboratorio
+                  </Button>
+                </CardContent>
+              </Card>
+
+              <Card className="text-center bg-gradient-to-br from-cybersec-blue to-blue-600 text-white border-0">
+                <CardHeader>
+                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-2">
+                    <span className="text-2xl">📧</span>
+                  </div>
+                  <CardTitle className="text-white">
+                    Entrenamiento Phishing
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <CardDescription className="text-blue-100">
+                    Pon a prueba tus habilidades identificando emails maliciosos
+                    en este módulo principal.
+                  </CardDescription>
+                  <Button
+                    onClick={handleStartGame}
+                    className="w-full bg-white text-cybersec-blue hover:bg-gray-100"
+                  >
+                    <Play className="w-4 h-4 mr-2" />
+                    Comenzar Entrenamiento
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         ) : (
           /* Game Screen */
