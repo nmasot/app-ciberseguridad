@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Login from "./pages/Login";
 import PhishingGame from "./pages/PhishingGame";
+import PasswordGame from "./pages/PasswordGame";
 import Results from "./pages/Results";
 import Profile from "./pages/Profile";
 import NotFound from "./pages/NotFound";
@@ -21,6 +22,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/game" element={<PhishingGame />} />
+          <Route path="/passwords" element={<PasswordGame />} />
           <Route path="/results" element={<Results />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/demo" element={<Index />} />
